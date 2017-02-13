@@ -1,0 +1,26 @@
+#summary This describes the basic usage of this software
+
+= Building =
+
+The included Makefile should be all that is needed to build this software.
+A working OpenMP implementation is required, as well as the gcc compiler.
+Simply type "make" in the code directory.
+
+= Running =
+
+After building the software, the user may run it, using these parameters:
+  * -f filename (this is the input file name in FASTA format)
+  * -L parameterval (this is the L parameter as described in the papers)
+  * -W parameterval (this is the W parameter as described in the papers)
+  * -K parameterval (this is the K parameter as described in the papers)
+  * -v version (this can be either "seq" or "occ" depending on preference)
+
+For instance, here is a sample configuration:
+{{{./teir -f ecoli.fa -L 3 -W 10 -K 50000 -v occ}}}
+
+= Papers =
+
+The following publications describe the algorithm in detail:
+  * Rigoutsos, I. and A. Floratos, Combinatorial Pattern Discovery in Biological Sequences: the TEIRESIAS Algorithm. Bioinformatics, 14(1), January 1998.
+
+  * Rigoutsos, I. and A. Floratos. Motif Discovery Without Alignment Or Enumeration. Proceedings 2nd Annual ACM International Conference on Computational Molecular Biology (RECOMB '98), New York, NY. March 1998.
